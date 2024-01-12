@@ -24,7 +24,7 @@ export default function PostCardList() {
     setTitle(title);
   }
 
-  if (isLoading) return <Loading />;
+  if (isLoading) return <Loading mssg="Post" />;
 
   return (
     <>
