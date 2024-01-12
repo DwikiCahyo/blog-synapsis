@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import PostCard from "./PostCard";
 import PostCardTitle from "./component/PostCardTitle";
 import PostCardBody from "./component/PostCardBody";
-import PostCardUploader from "./component/PostCardUploader";
 import { useFetchPost } from "@/app/hooks/posts/useFetchPost";
 import PostCardComment from "./component/PostCardComment";
 import PostCardButton from "./component/PostCardButton";
