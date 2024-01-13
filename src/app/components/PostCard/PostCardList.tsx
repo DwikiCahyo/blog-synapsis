@@ -8,7 +8,6 @@ import { useFetchPost } from "@/app/hooks/posts/useFetchPost";
 import PostCardComment from "./component/PostCardComment";
 import PostCardButton from "./component/PostCardButton";
 import Loading from "./Loading";
-import SearchCard from "../SearchCard/SearchCard";
 import { useSearchParams } from "next/navigation";
 
 export default function PostCardList() {
