@@ -1,17 +1,17 @@
 import React from "react";
-import Image from "next/image";
-import UserIcon from "../../../public/user.png";
 import UserCardList from "../components/UserCard/UserCardList";
 import Link from "next/link";
+import SearchBar from "../components/SearchBar/SearchBar";
 
 export default function user() {
   return (
     <>
       <div>
-        <h1 className="font-bold text-2xl text-slate-200 ml-2 ">
+        <h1 className="font-bold text-2xl text-slate-200 ml-2 mb-4">
           Total User : <span className="text-primary ml-1">30</span>
         </h1>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-[35px] p-4 md:p-2">
+        <SearchBar title="User" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-[35px]  md:p-2">
           <UserCardList />
         </div>
         <Link href={"user/create"}>

@@ -4,11 +4,10 @@ import { Post } from "@/app/types/types";
 import apiInstance from "@/app/utils/axios";
 import { useQuery } from "@tanstack/react-query";
 
-export async function fetchPost(page: number, title?: string) {
+export async function fetchPost(title?: string) {
   const response = await apiInstance.get("posts", {
     params: {
       per_page: 30,
-      page: page,
       title: title,
     },
   });
@@ -20,10 +19,10 @@ async function fetchPostById(post_id: string) {
   return response.data;
 }
 
-export function useFetchPost(page: number, title?: string) {
+export function useFetchPost(title?: string) {
   return useQuery<Post[]>({
-    queryFn: () => fetchPost(page, title),
-    queryKey: ["posts", { page, title }],
+    queryFn: () => fetchPost(title),
+    queryKey: ["posts", { title }],
   });
 }
 

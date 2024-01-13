@@ -7,21 +7,20 @@ async function fetchUserById(user_id: string) {
   return response.data;
 }
 
-async function fetchUser(page?: number, name?: string) {
+async function fetchUser(name?: string) {
   const response = await apiInstance.get(`/users`, {
     params: {
       per_page: 30,
-      page: page,
       name: name,
     },
   });
   return response.data;
 }
 
-export function useFetchUser(page?: number, name?: string) {
+export function useFetchUser(name?: string) {
   return useQuery<User[]>({
-    queryKey: ["users", { page, name }],
-    queryFn: () => fetchUser(page, name),
+    queryKey: ["users", { name }],
+    queryFn: () => fetchUser(name),
   });
 }
 

@@ -6,7 +6,7 @@ export default function UserCardButton() {
   const { user } = useUserContext();
   return (
     <Link href={`user/detail/${user.id}`}>
-      <button className="text-[15px] font-semibold mt-5 hover:text-primary hover:underline hover:font-bold">
+      <button className="text-[15px] font-semibold mt-3 md:mt-5 hover:text-primary hover:underline hover:font-bold">
         Detail
       </button>
     </Link>

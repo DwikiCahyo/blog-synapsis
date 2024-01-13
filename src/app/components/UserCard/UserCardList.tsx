@@ -7,12 +7,15 @@ import UserCardTitle from "./ component/ UserCardTitle";
 import UserCardEmail from "./ component/UserCardEmail";
 import UserCardStatus from "./ component/UserCardStatus";
 import UserCardButton from "./ component/UserCardButton";
-import { userInfo } from "os";
+import { useSearchParams } from "next/navigation";
 import Loading from "../PostCard/Loading";
 
 export default function UserCardList() {
-  const { data, isLoading } = useFetchUser();
+  const searchParamas = useSearchParams();
+  const nameQueryParamas = searchParamas.get("name") || undefined;
+  const { data, isLoading } = useFetchUser(nameQueryParamas);
 
+  if (isLoading) return <Loading mssg="User" />;
   return (
     <>
       {data?.map((user) => (

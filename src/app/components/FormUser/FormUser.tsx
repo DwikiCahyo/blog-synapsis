@@ -50,6 +50,7 @@ export default function FormUser() {
       toast.success("Success add new user", {
         position: toast.POSITION.TOP_RIGHT,
       });
+      console.log("Sukses upload");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSuccess]);

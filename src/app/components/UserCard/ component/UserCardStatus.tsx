@@ -9,16 +9,16 @@ export default function UserCardStatus() {
   const { user } = useUserContext();
 
   return (
-    <>
+    <div>
       {user.status === "active" ? (
-        <div className="mt-3 bg-green-400  p-2 text-center rounded-xl w-[60px] md:w-[100px] ml-2 ">
+        <div className="mt-3 mb-3 md:mb-0 bg-green-400  p-2 text-center rounded-xl w-[60px] md:w-[100px] ml-2  ">
           <h6 className="text-[12px] font-normal  text-white">Active</h6>
         </div>
       ) : (
-        <div className="mt-3 bg-red-400  p-2 text-center rounded-xl w-[60px] md:w-[100px] ml-2 ">
+        <div className="mt-3 mb-3 md:mb-0 bg-red-400  p-2 text-center rounded-xl w-[60px] md:w-[100px] ml-2 ">
           <h6 className="text-[12px] font-normal  text-white">Inactive</h6>
         </div>
       )}
-    </>
+    </div>
   );
 }
